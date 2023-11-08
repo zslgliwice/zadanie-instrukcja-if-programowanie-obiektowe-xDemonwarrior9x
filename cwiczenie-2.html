@@ -22,7 +22,20 @@
 	
 		function sprawdz()
 		{
-			
+			let i = document.getElementById("imie").value;
+			let w = document.getElementById("wiek").value;
+
+			if((i == "Brad" || i == "Morgan") && w>=18){
+				document.getElementById("wynik").innerText = "Możesz wziąć udział za darmo.";
+			}else{
+				if(w < 16){
+				document.getElementById("wynik").innerText = "Nie możesz wziąć udziału w seansie.";
+				}else if(w>=16 && w<=17){
+					document.getElementById("wynik").innerText = "Może wziąć udział, jeśli jesteś z opiekunem. Cena biletu 12zł";
+				}else{
+					document.getElementById("wynik").innerText = "Może wziąć udział. Cena biletu 18zł";
+				}
+			}
 			
 		}
 
