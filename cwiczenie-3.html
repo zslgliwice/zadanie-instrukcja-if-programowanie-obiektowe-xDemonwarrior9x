@@ -19,12 +19,15 @@
 	
 	<script>
 	
-		function ktora_cwiartka()
-		{
-			let x = document.getElementById("x").value;
-			let y = document.getElementById("y").value;
+	function ktora_cwiartka(){
 
-			if(x>=1 && y>=1){
+			let x = parseInt(document.getElementById("x").value);
+			let y = parseInt(document.getElementById("y").value);
+
+
+			if(x==15 && y==96){
+				document.getElementById("wynik").innerText = "krótki zarys życiorysu Kartezjusza";
+			}else if(x>=1 && y>=1){
 				document.getElementById("wynik").innerText = "P jest na ćwiartce I";
 			}else if(x<=(-1) && y>=1){
 				document.getElementById("wynik").innerText = "P jest na ćwiartce II";
@@ -32,10 +35,8 @@
 				document.getElementById("wynik").innerText = "P jest na ćwiartce III";
 			}else if(x>=1 && y<=(-1)){
 				document.getElementById("wynik").innerText = "P jest na ćwiartce IV";
-			}else if(x=0 && y>0 || x>0 && y==0){
+			}else if(x==0 && y>0 || x>0 && y==0){
 				document.getElementById("wynik").innerText = "P leży na jednej z osi układu";
-			}else if(x=15 && y=96){
-				document.getElementById("wynik").innerText = "René Descartes, urodzony 31 marca 1596 w La Haye Touraine, Francja, to znany filozof i matematyk. Po studiach prawniczych w Poitiers, podróżach po Europie i służbie wojskowej, osiedlił się na Uniwersytecie we Franeker w Holandii. Interesował się filozofią, matematyką, fizyką i optyką, stawiając na rozumne poznanie świata. Jego słynna maksyma to "Cogito ergo sum" (Myślę, więc jestem). Jego wkład do matematyki obejmuje geometrię analityczną, rachunek różniczkowy, funkcje i zagadnienia liczby urojonej. Zmarł 11 lutego 1650 roku w Sztokholmie.";
 			}else{
 				document.getElementById("wynik").innerText = "P=(0,0) jest początkiem układu współrzędnych";
 			}
