@@ -27,6 +27,79 @@
 			var b = document.getElementById('b').value;
 			var c = document.getElementById('c').value;
 			
+			let najmniejszy;
+			let największy;
+			let wartoscBez1;
+			let wartoscBez2;
+			let wartoscBez3;
+			let parzysta1;
+			let parzysta2;
+			let parzysta3;
+
+			if(a <= b && a <= c){
+				najmniejszy = a;
+			}else if(b <= a && b <= c){
+				najmniejszy = b;
+			}else{
+				najmniejszy = c;
+			}
+
+			if(a >= b && a >= c){
+				największy = a;
+			}else if(b >= a && b >= c){
+				największy = b;
+			}else{
+				największy = c;
+			}
+
+			if(a<0){
+				wartoscBez1 = Math.abs(a);
+			}else{
+				wartoscBez1 = a;
+			}
+
+			if(b<0){
+				wartoscBez2 = Math.abs(b);
+			}else{
+				wartoscBez2 = b;
+			}
+
+			if(c<0){
+				wartoscBez3 = Math.abs(c);
+			}else{
+				wartoscBez3 = c;
+			}
+
+			if(a % 2 == 0){
+				parzysta1 = "Tak";
+			}else{
+				parzysta1 = "Nie";
+			}
+
+			if(b % 2 == 0){
+				parzysta2 = "Tak";
+			}else{
+				parzysta2 = "Nie";
+			}
+
+			if(c % 2 == 0){
+				parzysta3 = "Tak";
+			}else{
+				parzysta3 = "Nie";
+			}
+
+
+
+			document.getElementById("wynik").innerHTML = "<p id='aaa'></p><p id='bbb'></p><p id='ccc'></p><p id='ddd'></p>";
+
+
+			document.getElementById("aaa").innerText = "Najmniejsza z wprowadzonych liczb to: "+najmniejszy;
+
+			document.getElementById("bbb").innerText = "Największa z wprowadzonych liczb to: "+największy;
+
+			document.getElementById("ccc").innerText = "Wartość bezwzględna każdej podanej liczby: a="+wartoscBez1+" b="+wartoscBez2+" c="+wartoscBez3;
+
+			document.getElementById("ddd").innerText = "Czy liczby są parzyste?: a="+parzysta1+" b="+parzysta2+" c="+parzysta3;
 			
 		}
 
